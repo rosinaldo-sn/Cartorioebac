@@ -132,8 +132,10 @@ int main()// Comando para que as linhas de codigos funcione
 	     printf("Escolha a opção desejada no menu:\n\n");
 	     printf("\t1-Registro de nomes\n");
 	     printf("\t2-Consulta de nomes\n");
-	     printf("\t3-Excluzão de nomes\n\n\n");
-	     printf("opção: ");// Fim do menu 
+	     printf("\t3-Excluzão de nomes\n");
+	     printf("\t4-Sair do sistema\n\n\n");
+	     printf("opção: ");
+		 // Fim do menu 
 
 	     scanf("%d", &opcao);// Armazenando a escolha do usuário 
 	
@@ -151,6 +153,11 @@ int main()// Comando para que as linhas de codigos funcione
             deletar();// FUNÇOES DO MENU 
             break;
             
+            case 4:
+            printf("Obrigado por usar o sistema!\n\n");
+            return 0;
+            break;
+            	
             default:printf("\t==Esta opção não existe==\n\n");// ALERTA PARA O USUARIO
             system("pause");
             break;
