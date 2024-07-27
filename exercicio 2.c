@@ -60,7 +60,29 @@ fclose(file);//fecha o arquivo
 	fprintf(file,",");
 	fclose(file);
 	
-    system("pause");
+	system("cls");
+	
+   int opcao=0;// Definindo valores 
+   int laco=1;
+   
+	printf("continuar adicionado?\n");
+	printf("1- sim\n");
+	printf("2- não\n");
+	scanf("%d",&opcao);
+	
+	system("cls");
+	switch(opcao)
+		{   case 1:
+			registro();
+            break;
+			
+			case 2:
+			system("pause");
+			break;
+			}
+	
+	
+    
 //FIM DA COLETA DE DADOS DE USUÁRIOS.
 }
 // INICIO DA CONSILTA DE DADOS DE USUÁRIOS
@@ -80,7 +102,7 @@ setlocale(LC_ALL, "Portuguese");//refente a biblioteca de texto reginal.
 	
 	if(file == NULL)// UTILIZADO PARA CASO O PROGAMA NAO ACHE O ITEN SOLICITADO.
 	{
-		printf("não foi possivel abrir o arquivo, nao localizado!.\n");
+		printf("não foi possivel abrir o arquivo, nao localizado!.\n\n");
 	}
 	while(fgets(conteudo,900,file) != NULL)
 	{
@@ -88,30 +110,68 @@ setlocale(LC_ALL, "Portuguese");//refente a biblioteca de texto reginal.
 		printf("%s,", conteudo);
 		printf("\n\n");
 	}
-	system("pause");
+   int opcao=0;// Definindo valores 
+   int laco=1;
+   
+	printf("continuar consultando?\n");
+	printf("1- sim\n");
+	printf("2- não\n");
+	scanf("%d",&opcao);
+	
+	system("cls");
+	switch(opcao)
+		{   case 1:
+			consulta();
+            break;
+			
+			case 2:
+			system("pause");
+			break;
+			}
 	//FIM DA CONSULTA DE DADOS.	
 }
 
 // INICIO DA FUNÇÃO DELETA USUÁRIOS
 int deletar()
 {//CRIAÇAO DE VARIAVES 
+
 	char cpf[100];
+	
 	//VARIAVES 
 	printf("Digite o cfp do usuário a ser deletado:");
+	printf("\n\n");
 	scanf("%s",cpf);
+	printf("\n\n");
 	
 	remove(cpf);
-	
-	printf("O usuário");
 	
 	FILE *file; //FUNÇAO PARA ABRI E LER O ARQUIVO SELECIONADO
 	file = fopen(cpf,"r");
 
 	if(file == NULL)
 	{
-	 printf("O usuário não encontrado\n");
-	 system("pause");
+	 printf("O usuário não encontrado\n\n\n");
 	}
+	
+	int opcao=0;// Definindo valores 
+    int laco=1;
+   
+	printf(" continuar deletando?\n");
+	printf(" 1- sim\n");
+	printf(" 2- não\n");
+	scanf("%d",&opcao);
+	
+	system("cls");
+	
+	switch(opcao)
+		{   case 1:
+			deletar();
+            break;
+			
+			case 2:
+			system("pause");
+			break;
+			}
 	// FIM DA FUNÇÃO DE DELETAR 
 }
 // FACE DO PROGRAMA.
@@ -137,7 +197,7 @@ int main()// Comando para que as linhas de codigos funcione
 	     printf("opção: ");
 		 // Fim do menu 
 
-	     scanf("%d", &opcao);// Armazenando a escolha do usuário 
+	     scanf("%d", &opcao);// função de escolha do menu 
 	
          system("cls"); 
          switch(opcao)
