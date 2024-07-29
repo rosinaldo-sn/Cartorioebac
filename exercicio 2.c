@@ -5,7 +5,8 @@
 
 //INICIO DA COLETA DE DADOS DE USUARIOS 
 int registro()
-{//CRIAÇAO DE VARIAVES 
+{
+//CRIAÇAO DE VARIAVES 
 char cpf[100];
 char nome[100];
 char sobrenome[100];
@@ -171,57 +172,75 @@ int deletar()
 			case 2:
 			system("pause");
 			break;
-			}
+		}
 	// FIM DA FUNÇÃO DE DELETAR 
 }
 // FACE DO PROGRAMA.
+
 int main()// Comando para que as linhas de codigos funcione
 {
    int opcao=0;// Definindo valores 
    int laco=1;
-   for(laco=1;laco=1;)
-    {
+   char senhadigitada[10]="a";
+   int comparacao;
+   
+   
+   printf("==== Cartório da EBAC ====\n\n");
+   printf("==== Login de adinistrador!\n\n Digite sua senha: ");
+   scanf("%s",senhadigitada);
+   
+   comparacao = strcmp (senhadigitada,"admin");
+   
+   if(comparacao==0);
+    {    
+        system("cls");
+         for(laco=1;laco=1;)
+        {
 	 	
 	 	
-	     system("cls");// Comando para manter a interface mais limpa
+	      system("cls");// Comando para manter a interface mais limpa
 	    
 		
-		 setlocale(LC_ALL, "Portuguese");// Definindo a linguagem
+		  setlocale(LC_ALL, "Portuguese");// Definindo a linguagem
 	
-	     printf("==== Cartório da EBAC ====\n\n");// Inicio do menu
-	     printf("Escolha a opção desejada no menu:\n\n");
-	     printf("\t1-Registro de nomes\n");
-	     printf("\t2-Consulta de nomes\n");
-	     printf("\t3-Excluzão de nomes\n");
-	     printf("\t4-Sair do sistema\n\n\n");
-	     printf("opção: ");
-		 // Fim do menu 
+	      printf("==== Cartório da EBAC ====\n\n");// Inicio do menu
+	      printf("Escolha a opção desejada no menu:\n\n");
+	      printf("\t1-Registro de nomes\n");
+	      printf("\t2-Consulta de nomes\n");
+	      printf("\t3-Excluzão de nomes\n");
+	      printf("\t4-Sair do sistema\n\n\n");
+	      printf("opção: ");
+		  // Fim do menu 
 
-	     scanf("%d", &opcao);// função de escolha do menu 
+	      scanf("%d", &opcao);// função de escolha do menu 
 	
-         system("cls"); 
-         switch(opcao)
-		{   case 1:
-			registro();// FUNÇOES DO MENU 
-            break;
+          system("cls"); 
+          switch(opcao)
+		    {   case 1:
+		        registro();// FUNÇOES DO MENU 
+                break;
 			 
-            case 2:
-            consulta();// FUNÇOES DO MENU 
-			break;
+                case 2:
+                consulta();// FUNÇOES DO MENU 
+			    break;
 			 
-            case 3:
-            deletar();// FUNÇOES DO MENU 
-            break;
+                case 3:
+                deletar();// FUNÇOES DO MENU 
+                break;
             
-            case 4:
-            printf("Obrigado por usar o sistema!\n\n");
-            return 0;
-            break;
+                case 4:
+                printf("Obrigado por usar o sistema!\n\n");
+                return 0;
+                break;
             	
-            default:printf("\t==Esta opção não existe==\n\n");// ALERTA PARA O USUARIO
-            system("pause");
-            break;
-		}
+                default:printf("\t==Esta opção não existe==\n\n");// ALERTA PARA O USUARIO
+                system("pause");
+                break;
+		    }
+	    }
 	}
+	    else
+    printf("sinha incorreta!")
+	
 }
 
