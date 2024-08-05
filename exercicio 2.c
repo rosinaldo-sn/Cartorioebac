@@ -191,7 +191,7 @@ int main()// Comando para que as linhas de codigos funcione
    
    comparacao = strcmp (senhadigitada,"admin");
    
-   if(comparacao==0);
+   if(comparacao==0)
     {    
         system("cls");
          for(laco=1;laco=1;)
@@ -238,9 +238,8 @@ int main()// Comando para que as linhas de codigos funcione
                 break;
 		    }
 	    }
-	}
-	    else
-    printf("sinha incorreta!")
-	
+	}  
+	else
+    printf("sinha incorreta!");
 }
 
