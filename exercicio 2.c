@@ -7,11 +7,11 @@
 int registro()
 {
 //CRIAÇAO DE VARIAVES 
-char cpf[100];
-char nome[100];
-char sobrenome[100];
-char cargo[100];
-char arquivo[900];
+char cpf[50];
+char nome[50];
+char sobrenome[50];
+char cargo[50];
+char arquivo[300];
 // FIMDA CRIAÇAO DE VARIAVES
 
 printf("digite o cpf a ser cadastrado:");
@@ -20,7 +20,7 @@ scanf("%s",cpf);// COMANDO REFERENTE A BIBLIOTECA DE STRING/VARIAVES
 strcpy(arquivo,cpf);// responsavel por copiar os valores das string
 
 FILE *file;// cria o arquivo
-file=fopen(arquivo,"w");// crira o arquivo
+file=fopen(arquivo,"w");// crira o arquivo w significa escrever 
 fprintf(file,cpf);// armazena no banco de dados "arquivo criado"
 fclose(file);//fecha o arquivo 
  
@@ -91,8 +91,8 @@ int consulta()
 { 
 setlocale(LC_ALL, "Portuguese");//refente a biblioteca de texto reginal.
     //CRIAÇAO DE VARIAVES
-	char cpf[100];
-	char conteudo[900];
+	char cpf[50];
+	char conteudo[300];
 	// FIM DAS VARIAVES
 	 
 	printf("digite o CPF a ser consultado:");
@@ -105,7 +105,7 @@ setlocale(LC_ALL, "Portuguese");//refente a biblioteca de texto reginal.
 	{
 		printf("não foi possivel abrir o arquivo, nao localizado!.\n\n");
 	}
-	while(fgets(conteudo,900,file) != NULL)
+	while(fgets(conteudo,300,file) != NULL)
 	{
 		printf("\nEssas são as informações do usuário:");
 		printf("%s,", conteudo);
@@ -184,7 +184,7 @@ int main()// Comando para que as linhas de codigos funcione
    char senhadigitada[10]="a";
    int comparacao;
    
-   
+   setlocale(LC_ALL, "Portuguese");
    printf("==== Cartório da EBAC ====\n\n");
    printf("==== Login de adinistrador!\n\n Digite sua senha: ");
    scanf("%s",senhadigitada);
