@@ -111,6 +111,8 @@ setlocale(LC_ALL, "Portuguese");//refente a biblioteca de texto reginal.
 		printf("%s,", conteudo);
 		printf("\n\n");
 	}
+    fclose(file);
+	
    int opcao=0;// Definindo valores 
    int laco=1;
    
@@ -136,7 +138,7 @@ setlocale(LC_ALL, "Portuguese");//refente a biblioteca de texto reginal.
 int deletar()
 {//CRIAÇAO DE VARIAVES 
 
-	char cpf[100];
+	char cpf[50];
 	
 	//VARIAVES 
 	printf("Digite o cfp do usuário a ser deletado:");
@@ -153,7 +155,8 @@ int deletar()
 	{
 	 printf("O usuário não encontrado\n\n\n");
 	}
-	
+    fclose(file);
+		    
 	int opcao=0;// Definindo valores 
     int laco=1;
    
